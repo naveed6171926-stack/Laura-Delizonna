@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Private LinkedIn positioning review prepared for Laura Delizonna, PhD.">
+<title>Laura Delizonna | LinkedIn Positioning Review</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root {
+  --ink:#172332; --muted:#64707a; --paper:#f7f3eb; --surface:#fffdf9; --line:#ded8cd;
+  --accent:#c9694d; --sage:#8d967d; --soft:#ebe5da; --shadow:0 18px 50px rgba(23,35,50,.08);
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:'DM Sans',Arial,sans-serif; line-height:1.6; }
+a { color:inherit; }
+button { font:inherit; }
+.shell { width:min(1180px, calc(100% - 40px)); margin:auto; }
+.topbar { position:sticky; top:0; z-index:10; backdrop-filter:blur(14px); background:rgba(247,243,235,.88); border-bottom:1px solid rgba(222,216,205,.7); }
+.topbar-inner { height:64px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.brandmark { font-weight:700; letter-spacing:.04em; font-size:12px; text-transform:uppercase; }
+.nav { display:flex; gap:18px; overflow:auto; white-space:nowrap; }
+.nav a { font-size:12px; color:var(--muted); text-decoration:none; }
+.nav a:hover { color:var(--ink); }
+.hero { min-height:calc(100vh - 64px); display:grid; align-items:center; padding:72px 0 90px; position:relative; overflow:hidden; }
+.hero:before { content:""; position:absolute; width:620px; height:620px; right:-240px; top:40px; border:1px solid rgba(201,105,77,.24); border-radius:50%; }
+.hero-grid { display:grid; grid-template-columns:1.18fr .82fr; gap:70px; align-items:center; }
+.kicker { color:var(--accent); font-weight:700; font-size:12px; letter-spacing:.14em; text-transform:uppercase; }
+h1,h2,h3 { margin:0; font-family:'Playfair Display',Georgia,serif; font-weight:600; letter-spacing:-.025em; }
+h1 { font-size:clamp(48px,6.2vw,88px); line-height:.98; max-width:850px; margin:14px 0 26px; }
+.hero p { font-size:20px; color:var(--muted); max-width:690px; margin:0; }
+.hero-rail { border-left:1px solid var(--line); padding-left:34px; }
+.hero-rail strong { display:block; font-family:'Playfair Display',Georgia,serif; font-size:24px; margin-bottom:10px; }
+.hero-rail span { color:var(--muted); font-size:14px; }
+.section { padding:100px 0; border-top:1px solid var(--line); scroll-margin-top:80px; }
+.section-head { display:flex; justify-content:space-between; gap:30px; align-items:end; margin-bottom:36px; }
+.section-head h2 { font-size:clamp(34px,4vw,56px); line-height:1.05; }
+.section-head p { max-width:470px; color:var(--muted); margin:0; }
+.insights { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.insight { background:var(--surface); border:1px solid var(--line); padding:28px; min-height:190px; box-shadow:var(--shadow); }
+.insight .num { font-size:11px; letter-spacing:.14em; color:var(--accent); font-weight:700; }
+.insight h3 { font-size:25px; margin:18px 0 10px; }
+.insight p { color:var(--muted); font-size:14px; margin:0; }
+.compare { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--line); background:var(--surface); }
+.compare > div { padding:36px; }
+.compare > div + div { border-left:1px solid var(--line); background:#fbfaf6; }
+.label { color:var(--accent); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+.compare h3 { font-size:28px; margin:14px 0 18px; }
+.current-text { color:var(--muted); font-size:15px; }
+.current-headline { font-size:20px; line-height:1.45; font-weight:600; }
+.reason-list { display:grid; gap:12px; margin:22px 0 0; padding:0; list-style:none; }
+.reason-list li { padding-left:20px; position:relative; color:var(--muted); font-size:14px; }
+.reason-list li:before { content:""; width:6px; height:6px; background:var(--accent); border-radius:50%; position:absolute; left:0; top:9px; }
+.headline-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+.headline-card { background:var(--surface); border:1px solid var(--line); padding:28px; position:relative; display:flex; flex-direction:column; min-height:235px; }
+.headline-card h3 { font-size:25px; line-height:1.2; margin:14px 0 12px; }
+.headline-card p { color:var(--muted); font-size:14px; margin:0 0 24px; }
+.eyebrow { font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+.copy-btn { margin-top:auto; align-self:flex-start; border:1px solid var(--ink); background:transparent; color:var(--ink); padding:9px 13px; cursor:pointer; border-radius:999px; font-size:12px; transition:.2s ease; }
+.copy-btn:hover,.copy-btn.copied { background:var(--ink); color:#fff; }
+.about-grid { display:grid; grid-template-columns:.7fr 1.3fr; gap:40px; align-items:start; }
+.about-note { position:sticky; top:100px; }
+.about-note h3 { font-size:34px; margin:12px 0; }
+.about-note p { color:var(--muted); font-size:14px; }
+.copy-panel { background:var(--surface); border:1px solid var(--line); padding:34px; }
+.copy-panel pre { white-space:pre-wrap; font-family:'DM Sans',Arial,sans-serif; font-size:15px; line-height:1.8; margin:0; color:#28333e; }
+.featured-list,.banner-list { display:grid; gap:14px; }
+.featured-card { display:grid; grid-template-columns:60px 1fr; gap:24px; padding:28px 0; border-bottom:1px solid var(--line); }
+.featured-card .number { font-family:'Playfair Display',Georgia,serif; font-size:28px; color:var(--accent); }
+.featured-card h3 { font-size:27px; margin-bottom:6px; }
+.featured-card p { margin:0 0 7px; color:var(--muted); font-size:14px; }
+.featured-card span { font-size:13px; }
+.banner-card { background:var(--surface); border:1px solid var(--line); padding:30px; }
+.banner-card h3 { font-size:34px; line-height:1.1; margin:14px 0 10px; }
+.banner-support { color:var(--muted); margin:0 0 22px; }
+.mini-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+.mini-grid div,.safe { border:1px solid var(--line); padding:16px; background:#fbfaf6; }
+.mini-grid b,.safe b { display:block; font-size:10px; text-transform:uppercase; letter-spacing:.12em; color:var(--accent); margin-bottom:6px; }
+.mini-grid span,.safe span { font-size:13px; color:var(--muted); }
+.safe { margin-top:12px; }
+.shift { display:grid; grid-template-columns:1fr 90px 1fr; align-items:stretch; gap:16px; }
+.shift-card { padding:36px; border:1px solid var(--line); background:var(--surface); }
+.shift-card h3 { font-size:32px; margin:12px 0; }
+.shift-card p { color:var(--muted); margin:0; }
+.arrow { display:grid; place-items:center; font-family:'Playfair Display',Georgia,serif; font-size:38px; color:var(--accent); }
+.next { background:var(--ink); color:#fff; border:0; }
+.next .section-head p { color:#c7ced4; }
+.nextbox { display:flex; justify-content:space-between; align-items:center; gap:30px; padding:30px 0 0; }
+.nextbox a { display:inline-flex; padding:12px 16px; border:1px solid rgba(255,255,255,.35); border-radius:999px; text-decoration:none; }
+.footer { padding:30px 0 50px; color:var(--muted); font-size:12px; }
+.reveal { opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity:1; transform:none; }
+@media(max-width:850px) {
+  .nav { display:none; }
+  .hero-grid,.about-grid { grid-template-columns:1fr; gap:34px; }
+  .hero { min-height:auto; padding:80px 0; }
+  .hero-rail { border-left:0; border-top:1px solid var(--line); padding:24px 0 0; }
+  .insights,.headline-grid { grid-template-columns:1fr; }
+  .compare,.shift { grid-template-columns:1fr; }
+  .compare > div + div { border-left:0; border-top:1px solid var(--line); }
+  .arrow { transform:rotate(90deg); padding:4px; }
+  .about-note { position:static; }
+  .mini-grid { grid-template-columns:1fr; }
+  .section { padding:72px 0; }
+  .shell { width:min(100% - 28px, 1180px); }
+  h1 { font-size:clamp(44px,14vw,72px); }
+}
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  .reveal { opacity:1; transform:none; transition:none; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="shell topbar-inner">
+    <div class="brandmark">Private LinkedIn Positioning Review</div>
+    <nav class="nav" aria-label="Section navigation">
+      <a href="#overview">Overview</a><a href="#positioning">Positioning</a><a href="#headline">Headline</a><a href="#about">About</a><a href="#featured">Featured</a><a href="#banner">Banner</a><a href="#shift">Shift</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="overview">
+  <div class="shell hero-grid">
+    <div>
+      <div class="kicker">Prepared for Laura Delizonna, PhD</div>
+      <h1>Your expertise is already strong. The profile can make the founder outcome clearer, faster.</h1>
+      <p>A tighter positioning system can connect your Stanford and psychology credibility, founder-CEO work, and high-growth leadership expertise into one immediate message.</p>
+    </div>
+    <aside class="hero-rail">
+      <strong>Primary opportunity</strong>
+      <span>Move from a credential-rich description of what you do to a sharper promise for the Founder-CEO who is scaling faster than their leadership system.</span>
+    </aside>
+  </div>
+</section>
+
+<section class="section" id="positioning">
+  <div class="shell">
+    <div class="section-head"><h2>What I found</h2><p>Your public positioning already has unusually strong proof. The opportunity is not to add more authority. It is to make the buyer, moment and outcome easier to recognize.</p></div>
+    <div class="insights">
+      <article class="insight reveal"><div class="num">01</div><h3>Founder-first clarity</h3><p>Your current profile leads with a long stack of roles and credentials. Your strongest commercial story is the moment a founder's company starts growing faster than the founder can lead it.</p></article>
+      <article class="insight reveal"><div class="num">02</div><h3>Turn proof into a hierarchy</h3><p>Stanford, HBR, McKinsey, a16z, Teleport and global-company experience are powerful. They work harder when the profile first establishes the problem you solve.</p></article>
+      <article class="insight reveal"><div class="num">03</div><h3>Own the scale transition</h3><p>Your content already teaches the founder shift from operator to strategic leader, including your Rower vs. Sailor idea. That is a distinctive positioning territory worth making more visible.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="positioning-detail">
+  <div class="shell">
+    <div class="section-head"><h2>Your current positioning</h2><p>The current profile is credible and specific, but the visitor has to assemble the story themselves.</p></div>
+    <div class="compare reveal">
+      <div>
+        <div class="label">What it communicates</div>
+        <h3>Deep expertise and serious credibility.</h3>
+        <p class="current-text">Founder-CEO coaching, Stanford teaching, psychological safety, major-company experience, books, HBR reach, McKinsey faculty and accelerator work.</p>
+      </div>
+      <div>
+        <div class="label">What is still unclear</div>
+        <h3>Why you, for this moment?</h3>
+        <ul class="reason-list">
+          <li>The headline does not immediately lead with the founder's scaling problem.</li>
+          <li>The visitor has to translate several credentials into a single reason to engage.</li>
+          <li>Your strongest founder-specific ideas are more visible in posts than in the profile's first screen.</li>
+          <li>The profile can connect psychological safety to execution, decision speed and leadership scale more explicitly.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="headline">
+  <div class="shell">
+    <div class="section-head"><h2>The headline</h2><p>Five directions, each designed to make the right founder recognize themselves without sacrificing your authority.</p></div>
+    <div class="copy-panel reveal" style="margin-bottom:16px;">
+      <div class="label">Current headline</div>
+      <p class="current-headline">CEO &amp; Executive Team Coach for high-growth founders, seed through scale | Stanford Instructor | HBR author on psychological safety (2.5M+ reads) | McKinsey &amp; Co. International Faculty | a16z Network</p>
+    </div>
+    <div class="headline-grid"><article class="headline-card reveal">
+      <div class="eyebrow">OPTION 01</div>
+      <h3>Executive Coach for Founder-CEOs | Lead Through Hypergrowth Without Becoming the Bottleneck</h3>
+      <p>Makes the core buyer and the scaling problem immediately legible.</p>
+      <button class="copy-btn" data-copy="Executive Coach for Founder-CEOs | Lead Through Hypergrowth Without Becoming the Bottleneck">Copy headline</button>
+    </article>
+<article class="headline-card reveal">
+      <div class="eyebrow">OPTION 02</div>
+      <h3>I Coach Founder-CEOs Through Hypergrowth, Co-Founder Friction &amp; Leadership Team Scale</h3>
+      <p>Keeps her existing inflection-point language, but puts the buyer first.</p>
+      <button class="copy-btn" data-copy="I Coach Founder-CEOs Through Hypergrowth, Co-Founder Friction &amp; Leadership Team Scale">Copy headline</button>
+    </article>
+<article class="headline-card reveal">
+      <div class="eyebrow">OPTION 03</div>
+      <h3>CEO &amp; Executive Team Coach | Helping Founders Lead, Decide &amp; Scale Without Losing the Team</h3>
+      <p>Connects leadership development to the business reality of scale.</p>
+      <button class="copy-btn" data-copy="CEO &amp; Executive Team Coach | Helping Founders Lead, Decide &amp; Scale Without Losing the Team">Copy headline</button>
+    </article>
+<article class="headline-card reveal">
+      <div class="eyebrow">OPTION 04</div>
+      <h3>Stanford Instructor &amp; Executive Coach for Founder-CEOs | High-Performance Teams, Psychological Safety &amp; Scale</h3>
+      <p>Balances authority with the subjects she is already known for.</p>
+      <button class="copy-btn" data-copy="Stanford Instructor &amp; Executive Coach for Founder-CEOs | High-Performance Teams, Psychological Safety &amp; Scale">Copy headline</button>
+    </article>
+<article class="headline-card reveal">
+      <div class="eyebrow">OPTION 05</div>
+      <h3>For Founder-CEOs Scaling Fast: Better Decisions, Stronger Teams, Steadier Leadership</h3>
+      <p>A direct, outcome-led option that feels native to a founder audience.</p>
+      <button class="copy-btn" data-copy="For Founder-CEOs Scaling Fast: Better Decisions, Stronger Teams, Steadier Leadership">Copy headline</button>
+    </article></div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="shell">
+    <div class="section-head"><h2>Your About</h2><p>The current About is strong on evidence. The revision changes the order so the founder problem and business outcome arrive before the credentials.</p></div>
+    <div class="about-grid">
+      <div class="about-note">
+        <div class="label">Current About</div>
+        <h3>Authority first. Buyer context second.</h3>
+        <p>The existing copy has excellent proof and specificity. It can be more persuasive if the first lines mirror the moment your ideal client is experiencing.</p>
+        <button class="copy-btn" data-copy="I coach CEOs and their executive teams through the moments when the company starts growing faster than they are. My clients are founders from seed through Series C. They&#x27;ve scaled from 15 to 180+ employees and grown valuations from $150M to $3B. They typically come to me at inflection points: a first-time CEO rapidly scaling, co-founder friction, preparing for a board or a raise, a leadership team growing in scope, or performing well externally while running on fumes. I also work with senior leaders at global companies including Google, Apple, and Accenture.
+
+Engagements are structured and measurable: a 360 assessment and stakeholder interviews, a development plan with metrics your board could track, and sessions applied to what&#x27;s live in your business. I also deliver co-founder coaching, executive team coaching, and leadership offsites, and serve as performance coach for Teleport, the Silicon Valley residency accelerator for global founders. I&#x27;ve taught leadership and flourishing at Stanford since 2005. I serve on McKinsey &amp; Co.&#x27;s international faculty, have authored four books, and wrote the HBR article on psychological safety that&#x27;s been read 2.5 million times. My PhD is in psychology, with doctoral training at Stanford, Harvard, and Boston University. If you&#x27;re a founder at one of these inflection points, or you know one, my inbox is open.">Copy current About</button>
+      </div>
+      <div class="copy-panel reveal">
+        <pre>I coach CEOs and their executive teams through the moments when the company starts growing faster than they are. My clients are founders from seed through Series C. They&#x27;ve scaled from 15 to 180+ employees and grown valuations from $150M to $3B. They typically come to me at inflection points: a first-time CEO rapidly scaling, co-founder friction, preparing for a board or a raise, a leadership team growing in scope, or performing well externally while running on fumes. I also work with senior leaders at global companies including Google, Apple, and Accenture.
+
+Engagements are structured and measurable: a 360 assessment and stakeholder interviews, a development plan with metrics your board could track, and sessions applied to what&#x27;s live in your business. I also deliver co-founder coaching, executive team coaching, and leadership offsites, and serve as performance coach for Teleport, the Silicon Valley residency accelerator for global founders. I&#x27;ve taught leadership and flourishing at Stanford since 2005. I serve on McKinsey &amp; Co.&#x27;s international faculty, have authored four books, and wrote the HBR article on psychological safety that&#x27;s been read 2.5 million times. My PhD is in psychology, with doctoral training at Stanford, Harvard, and Boston University. If you&#x27;re a founder at one of these inflection points, or you know one, my inbox is open.</pre>
+      </div>
+    </div>
+    <div style="height:30px"></div>
+    <div class="about-grid">
+      <div class="about-note">
+        <div class="label">New About</div>
+        <h3>Founder problem → approach → proof → invitation.</h3>
+        <p>Paste-ready replacement. The structure is deliberately direct, while preserving your strongest proof.</p>
+        <button class="copy-btn" data-copy="When the company starts growing faster than you are, leadership has to evolve with it.
+
+I coach Founder-CEOs and executive teams through the inflection points where scale makes the old way of leading stop working: rapid growth, co-founder friction, a leadership team expanding in scope, preparing for a board or raise, or performing well externally while running on fumes.
+
+My work sits at the intersection of psychology, leadership, and execution. I help leaders make high-stakes decisions with more clarity, build teams that can execute without everything flowing through the CEO, strengthen trust and accountability, and lead steadily through volatility and hypergrowth.
+
+My approach is structured and measurable. We use 360 assessments and stakeholder interviews to surface patterns, build a development plan with clear milestones, and apply behavioral experiments to the situations that are live in the business. I also work with co-founders, executive teams, and leadership groups through coaching and offsites.
+
+I bring a PhD in psychology, doctoral research experience at Harvard, postdoctoral training at Stanford, and more than 20 years of coaching and teaching leaders. I teach at Stanford, serve on McKinsey &amp; Co.&#x27;s international faculty, coach through the a16z and Recast Capital networks, and serve as a performance coach for Teleport. My HBR article on psychological safety has reached more than 2.5 million readers.
+
+If you&#x27;re scaling fast and the leadership challenge is changing with the company, my inbox is open.">Copy About</button>
+      </div>
+      <div class="copy-panel reveal">
+        <pre>When the company starts growing faster than you are, leadership has to evolve with it.
+
+I coach Founder-CEOs and executive teams through the inflection points where scale makes the old way of leading stop working: rapid growth, co-founder friction, a leadership team expanding in scope, preparing for a board or raise, or performing well externally while running on fumes.
+
+My work sits at the intersection of psychology, leadership, and execution. I help leaders make high-stakes decisions with more clarity, build teams that can execute without everything flowing through the CEO, strengthen trust and accountability, and lead steadily through volatility and hypergrowth.
+
+My approach is structured and measurable. We use 360 assessments and stakeholder interviews to surface patterns, build a development plan with clear milestones, and apply behavioral experiments to the situations that are live in the business. I also work with co-founders, executive teams, and leadership groups through coaching and offsites.
+
+I bring a PhD in psychology, doctoral research experience at Harvard, postdoctoral training at Stanford, and more than 20 years of coaching and teaching leaders. I teach at Stanford, serve on McKinsey &amp; Co.&#x27;s international faculty, coach through the a16z and Recast Capital networks, and serve as a performance coach for Teleport. My HBR article on psychological safety has reached more than 2.5 million readers.
+
+If you&#x27;re scaling fast and the leadership challenge is changing with the company, my inbox is open.</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="featured">
+  <div class="shell">
+    <div class="section-head"><h2>Featured section opportunity</h2><p>The supplied profile capture does not expose the current Featured module. Rather than invent what is there, these are the three strongest assets to surface if they are available in the live profile.</p></div>
+    <div class="featured-list"><article class="featured-card reveal">
+      <div class="number">01</div>
+      <div><h3>The High-Performance Leadership Roadmap</h3><p>Surface the research-backed roadmap as the first resource for founders who want a practical entry point.</p><span>It turns an existing public asset into a clear bridge from thought leadership to coaching.</span></div>
+    </article>
+<article class="featured-card reveal">
+      <div class="number">02</div>
+      <div><h3>The Psychological Safety Proof Point</h3><p>Feature the HBR article, then pair it with a short post or talk showing how psychological safety connects to execution.</p><span>It converts a well-known authority asset into a stronger reason to explore her current work.</span></div>
+    </article>
+<article class="featured-card reveal">
+      <div class="number">03</div>
+      <div><h3>Founder Scaling &amp; Decision-Making</h3><p>Feature a founder-relevant case or framework, such as the DACI decision model or the Rower vs. Sailor leadership idea.</p><span>It makes her expertise feel immediately applicable to the founder&#x27;s next scaling problem.</span></div>
+    </article></div>
+  </div>
+</section>
+
+<section class="section" id="banner">
+  <div class="shell">
+    <div class="section-head"><h2>A clearer banner direction</h2><p>The banner's job should be simple: tell a Founder-CEO what leadership problem Laura helps them solve before they read another line.</p></div>
+    <div class="banner-list"><article class="banner-card reveal">
+      <div class="eyebrow">01 / Lead through hypergrowth</div>
+      <h3>Lead through hypergrowth.<br>Without becoming the bottleneck.</h3>
+      <p class="banner-support">Executive coaching for CEOs, founders &amp; leadership teams</p>
+      <div class="mini-grid">
+        <div><b>Job</b><span>Clarify the primary founder problem.</span></div>
+        <div><b>Visual</b><span>Editorial architectural ascent: arches, terraces, bridges and a small group at the summit. The visual metaphor is leadership capacity compounding as the company grows.</span></div>
+        <div><b>Palette</b><span>Warm ivory, deep navy, muted terracotta, stone and olive.</span></div>
+        <div><b>Typography</b><span>High-contrast editorial serif for the main line, restrained sans-serif for support.</span></div>
+      </div>
+      <div class="safe"><b>Crop safety</b><span>Keep the left-center text inside the desktop safe zone and reserve the right side for the architectural visual. Avoid critical copy near the profile-photo overlap.</span></div>
+    </article>
+<article class="banner-card reveal">
+      <div class="eyebrow">02 / The CEO evolves with the company</div>
+      <h3>The company scales.<br>Your leadership has to scale with it.</h3>
+      <p class="banner-support">Founder-CEO &amp; executive team coaching | Stanford instructor</p>
+      <div class="mini-grid">
+        <div><b>Job</b><span>Make the leadership transition explicit.</span></div>
+        <div><b>Visual</b><span>Minimal progression of three increasingly sophisticated structural forms, moving from operator-level control to distributed leadership, with subtle human figures.</span></div>
+        <div><b>Palette</b><span>Ink, parchment, soft clay and a restrained sage accent.</span></div>
+        <div><b>Typography</b><span>Elegant serif headline paired with compact uppercase sans-serif proof.</span></div>
+      </div>
+      <div class="safe"><b>Crop safety</b><span>Keep the headline left of center and use the right third for the progression. Leave generous breathing room for LinkedIn&#x27;s profile photo overlap.</span></div>
+    </article>
+<article class="banner-card reveal">
+      <div class="eyebrow">03 / Build a team that executes without you</div>
+      <h3>Build a team that executes<br>without you.</h3>
+      <p class="banner-support">Executive coaching for Founder-CEOs | High-performance leadership</p>
+      <div class="mini-grid">
+        <div><b>Job</b><span>Lead with the strongest concrete outcome.</span></div>
+        <div><b>Visual</b><span>A clean, elevated system of connected platforms and pathways, with the leader positioned as a guide rather than the center of every interaction.</span></div>
+        <div><b>Palette</b><span>Deep charcoal, warm cream, terracotta linework and subtle olive.</span></div>
+        <div><b>Typography</b><span>Modern editorial sans-serif with a single serif emphasis word.</span></div>
+      </div>
+      <div class="safe"><b>Crop safety</b><span>Place the headline in the left half, keep the visual system toward the right, and maintain a clear mobile-safe crop across the center.</span></div>
+    </article></div>
+    <div style="margin-top:24px" class="copy-panel reveal">
+      <div class="label">Selected direction</div>
+      <h3 style="font-size:34px;margin:12px 0">Lead through hypergrowth. Without becoming the bottleneck.</h3>
+      <p style="margin:0;color:var(--muted)">This is the strongest first direction because it compresses the founder audience, the scaling moment and the outcome into one memorable sentence. Your new banner is attached separately.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="shift">
+  <div class="shell">
+    <div class="section-head"><h2>The positioning shift</h2><p>Less credential accumulation. More immediate recognition of the leadership moment you are uniquely equipped to coach.</p></div>
+    <div class="shift reveal">
+      <div class="shift-card"><div class="label">Current</div><h3>“Here is my experience.”</h3><p>Stanford instructor, HBR author, psychologist, coach, speaker, faculty member, network coach.</p></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="shift-card"><div class="label">New</div><h3>“Here is the moment I help you navigate.”</h3><p>Founder-CEOs scaling fast, evolving from operator to strategic leader, building teams that execute without everything depending on them.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section next" id="next">
+  <div class="shell">
+    <div class="section-head"><h2>Ready to use.</h2><p>Your new headline options and About section are copyable above. The banner is attached separately as a finished asset.</p></div>
+    <div class="nextbox">
+      <div><strong>One useful next move:</strong><br>make the profile tell the founder story before the credential story.</div>
+      <a href="#headline">Review headline options</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell">Prepared for Laura Delizonna, PhD. Positioning recommendations are based on the supplied LinkedIn profile material and publicly available professional sources.</div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const text = btn.dataset.copy;
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (e) {
+      const area = document.createElement('textarea');
+      area.value = text; document.body.appendChild(area); area.select();
+      document.execCommand('copy'); area.remove();
+    }
+    const original = btn.textContent;
+    btn.textContent = 'Copied';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = original; btn.classList.remove('copied'); }, 1400);
+  });
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+const links = [...document.querySelectorAll('.nav a')];
+const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const navObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      links.forEach(l => l.style.color = '');
+      const active = document.querySelector('.nav a[href="#' + entry.target.id + '"]');
+      if (active) active.style.color = 'var(--ink)';
+    }
+  });
+}, {rootMargin:'-25% 0px -65% 0px'});
+sections.forEach(s => navObserver.observe(s));
+</script>
+</body>
+</html>
